@@ -10,14 +10,24 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
+        <h1>Eetsa Pizza</h1>
+        <h2>Order Form</h2>
+      </div>
       <!-- Order form -->
       <div class="orderForm">
         <form id="pizzaOrder">
-          <!-- Size Form  -->
-          <label for="userName">Your Name:</label>
-          <input id="userName" type="text">
-          <div class="form-group">
+          <!-- Size & Name Form  -->
+          <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Your Name:</span>
+            </div>
+            <input type="text" id="userName" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
 
+          <!-- <label for="userName">Your Name:</label>
+          <input id="userName" type="text"> -->
+          <div class="form-group">
             <p>Pick your size:</p>
             <label>
             <input type="radio" name="size" value="12 Inch (Small)" checked>12 Inch (Small)</label><br>
