@@ -10,13 +10,19 @@
   </head>
   <body>
     <div class="container">
+      <!-- Order form -->
         <form id="pizzaOrder">
-          <!-- <div class="form-group">
+          <!-- Size Form  -->
+          <div class="form-group">
             <p>Pick your size:</p>
-            <input type="checkbox" class="size" value="12">12<br>
-            <input type="checkbox" class="size" value="14">14<br>
-            <input type="checkbox" class="size" value="16">16<br>
-          </div> -->
+            <label>
+            <input type="radio" name="size" value="12" checked>12 Inch (Small)</label><br>
+            <label>
+            <input type="radio" name="size" value="16">16 Inch (Medium)</label><br>
+            <label>
+            <input type="radio" name="size" value="20">20 Inch (Large)</label><br>
+          </div>
+          <!-- Toppings Form -->
           <div class="form-group">
             <p>Pick your toppings:</p>
             <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
@@ -25,13 +31,19 @@
             <input type="checkbox" name="toppings" value="Arugula">Arugula<br>
             <input type="checkbox" name="toppings" value="Spinach">Spinach<br>
           </div>
+          <!-- Submit Button -->
           <button type="submit" id="submitBtn">Place Order</button>
         </form>
+        <!-- Receipt -->
       <div class="results">
-        <p>your pizzzzaaa toppings are </p>
+        <span id="customer"></span>,
+        <p>You have ordered a:</p>
+        <p><span id="pizzaSize"></span> pizza</p>
+        <p>with:</p>
         <span id="toppings"></span>
+        <p>& your total comes to:</p>
+        <span id="receipt"></span>
       </div>
     </div>
-
   </body>
 </html>
