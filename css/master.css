@@ -3,13 +3,49 @@
 }
 body {
     background-image: url("../img/pepperoni.jpg");
+    background-size: cover;
 }
 .jumbotron {
   background-image: url("https://media.giphy.com/media/140F7fRijQLA08/giphy.gif");
   /* background-size: cover; */
   color: white;
   text-shadow: 2px 2px #ff0000;
+  radius: 25px;
 }
 h1 {
   font-size: 80px;
+}
+input[type=text] {
+  border: 2px solid red;
+  border-radius: 4px;
+  width: 80%;
+}
+input[type=text]:focus {
+  border: 5px solid #ff0000;
+}
+input[type=text] {
+  background-color: white;
+  background-image: url('../img/tinypizza.png');
+  opacity: 0.8;
+  background-size: 30px;
+  background-position: 10px 10px;
+  background-repeat: repeat;
+  padding: 20px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #ff0000;
+  border: none;
+  color: red;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+p{
+  font-size: 34px;
+  color:white;
+  text-shadow: 1px 1px #000000;
+}
+.button {
+  font-size: 34px;
 }
