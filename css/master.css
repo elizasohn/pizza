@@ -10,10 +10,35 @@ body {
   /* background-size: cover; */
   color: white;
   text-shadow: 2px 2px #ff0000;
-  radius: 25px;
 }
 h1 {
   font-size: 80px;
+}
+h5 {
+  color: white;
+  text-shadow:1px 1px #000000;
+  background-color: rgba(255, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+h6 {
+  color: white;
+  text-shadow:1px 1px #000000;
+  background-color: rgba(255, 0, 0, 0.6);
+  /* border-radius: 10px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 25px; */
+}
+.form-group {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: red;
+  padding: 10px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 0, 0, 0.6);
 }
 input[type=text] {
   border: 2px solid red;
@@ -48,4 +73,7 @@ p{
 }
 .button {
   font-size: 34px;
+}
+.nameLabel label{
+  background-color: red;
 }

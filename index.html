@@ -10,48 +10,58 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Pizza 4 You</h1>
-        <h2>Order Form</h2>
+      <div class="row">
+        <div class="col-12">
+          <div class="jumbotron">
+          <h1>Pizza 4 You</h1>
+          <h2>Order Form</h2>
+          </div>
+        </div>
       </div>
       <!-- Order form -->
       <div class="orderForm">
         <form id="pizzaOrder">
-          <!-- Size & Name Form  -->
-          <!-- <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-lg">Your Name:</span>
+          <div class="row">
+            <div class="col-12">
+      <!-- Size & Name Form  -->
+              <label for="userName" class="nameLabel"><h5>Your Name:</h5></label>
+              <input id="userName" type="text">
             </div>
-            <input type="text" id="userName" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-          </div> -->
-
-          <label for="userName">Your Name:</label>
-          <input id="userName" type="text">
-          <div class="form-group">
-
-            <p>Pick your size:</p>
-            <label>
-            <input type="radio" name="size" value="12 Inch (Small)" checked>12 Inch (Small)</label><br>
-            <label>
-            <input type="radio" name="size" value="16 Inch (Medium)">16 Inch (Medium)</label><br>
-            <label>
-            <input type="radio" name="size" value="20 Inch (Large)">20 Inch (Large)</label><br>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <p>Pick your size:</p>
+                <h5>
+                <label>
+                <input type="radio" name="size" value="12 Inch (Small)" checked>12 Inch (Small)</label><br>
+                <label>
+                <input type="radio" name="size" value="16 Inch (Medium)">16 Inch (Medium)</label><br>
+                <label>
+                <input type="radio" name="size" value="20 Inch (Large)">20 Inch (Large)</label><br>
+                </h5>
+              </div>
+            </div>
           <!-- Toppings Form -->
-          <div class="form-group">
-            <p>Pick your toppings:</p>
-            <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
-            <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
-            <input type="checkbox" name="toppings" value="Olives">Olives<br>
-            <input type="checkbox" name="toppings" value="Arugula">Arugula<br>
-            <input type="checkbox" name="toppings" value="Spinach">Spinach<br>
+            <div class="col-6">
+              <div class="form-group">
+              <p>Pick your toppings:</p>
+              <h5>
+              <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
+              <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
+              <input type="checkbox" name="toppings" value="Olives">Olives<br>
+              <input type="checkbox" name="toppings" value="Arugula">Arugula<br>
+              <input type="checkbox" name="toppings" value="Spinach">Spinach<br>
+              </h5>
+              </div>
+            </div>
           </div>
           <!-- Submit Button -->
           <button type="submit" id="submitBtn" class="btn btn-danger btn-lg">Place Order</button>
         </form>
       </div>
         <!-- Receipt -->
-      <div class="results">
+      <div class="results form-group">
         <span id="customer"></span>,
         <p>You have ordered a:</p>
         <p><span id="pizzaSize"></span> Pizza</p>

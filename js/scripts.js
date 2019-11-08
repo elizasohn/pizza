@@ -7,7 +7,7 @@ function Pizza (size, toppings,) {
 Pizza.prototype.getPrice = function(toppings){
   if (this.toppings.length > 0) {
     this.price += this.toppings.length;
-    // why doesn't this work?
+    // why doesn't this forEach loop work?
     // this.toppings.forEach(function(toppings){
     //   this.price += 1;
     // })
