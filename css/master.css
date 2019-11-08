@@ -4,3 +4,12 @@
 body {
     background-image: url("../img/pepperoni.jpg");
 }
+.jumbotron {
+  background-image: url("https://media.giphy.com/media/140F7fRijQLA08/giphy.gif");
+  /* background-size: cover; */
+  color: white;
+  text-shadow: 2px 2px #ff0000;
+}
+h1 {
+  font-size: 80px;
+}
