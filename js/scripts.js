@@ -1,13 +1,17 @@
-function Pizza (size, toppings) {
+function Pizza (size, toppings,) {
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
 }
 
-Pizza.prototype.getPrice = function(){
-  this.toppings.forEach(function(topping){
-    this.price += 1;
-  });
+Pizza.prototype.getPrice = function(toppings){
+  if (this.toppings.length > 0) {
+    this.price += this.toppings.length;
+    // why doesn't this work?
+    // this.toppings.forEach(function(toppings){
+    //   this.price += 1;
+    // })
+  }
   if (this.size === 12){
     this.price += 12;
   }else if (this.size === 16){
@@ -18,35 +22,34 @@ Pizza.prototype.getPrice = function(){
   return this.price;
 };
 
-
-
-
 //User Interface Logic
 $(document).ready(function(){
   $("form#pizzaOrder").submit(function(event){
     event.preventDefault();
     var sizeInput = parseInt($("input:radio[name=size]:checked").val());
-    console.log(sizeInput);
+
     var toppingsArray = [];
     var toppingsInputs;
+
+    console.log("toppingsArray", toppingsArray);
+    console.log("toppingsInput", toppingsInputs);
     $("input:checkbox[name=toppings]:checked").each(function(){
       var toppingsInputs = $(this).val();
       toppingsArray.push(toppingsInputs);
-      console.log(toppingsArray);
+      console.log("toppings array", toppingsArray);
       $("#toppings").append(toppingsInputs + "<br>");
     })
-    console.log(sizeInput);
+
+
     var myPizza = new Pizza(sizeInput, toppingsArray);
     console.log(myPizza);
     var price = myPizza.getPrice();
+    console.log("price", price);
     $(".results").show();
-    $("#receipt").append(price);
     $("#customer").append(nameInput);
-    $("#pizzaSize").html(myPizza.size);
-    // var sizeInput = $('.size').val();
-    // toppingsInputs.each(function(toppingInput){
-    //   toppingsArray.push(toppingsInputs.val());
-    // });
+    $("#pizzaSize").text(myPizza.size);
+    $("#receipt").html(myPizza.price);
+
 
   })
 })
