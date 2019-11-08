@@ -10,11 +10,26 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
-      </div>
-      <div class="order">
-      </div>
+        <form id="pizzaOrder">
+          <!-- <div class="form-group">
+            <p>Pick your size:</p>
+            <input type="checkbox" class="size" value="12">12<br>
+            <input type="checkbox" class="size" value="14">14<br>
+            <input type="checkbox" class="size" value="16">16<br>
+          </div> -->
+          <div class="form-group">
+            <p>Pick your toppings:</p>
+            <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
+            <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
+            <input type="checkbox" name="toppings" value="Olives">Olives<br>
+            <input type="checkbox" name="toppings" value="Arugula">Arugula<br>
+            <input type="checkbox" name="toppings" value="Spinach">Spinach<br>
+          </div>
+          <button type="submit" id="submitBtn">Place Order</button>
+        </form>
       <div class="results">
+        <p>your pizzzzaaa toppings are </p>
+        <span id="toppings"></span>
       </div>
     </div>
 
