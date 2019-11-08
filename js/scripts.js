@@ -12,11 +12,11 @@ Pizza.prototype.getPrice = function(toppings){
     //   this.price += 1;
     // })
   }
-  if (this.size === 12){
+  if (this.size === "12 Inch (Small)"){
     this.price += 12;
-  }else if (this.size === 16){
+  }else if (this.size === "16 Inch (Medium)"){
     this.price += 16;
-  }else if (this.size === 20){
+  }else if (this.size === "20 Inch (Large)"){
     this.price += 20;
   }
   return this.price;
@@ -26,33 +26,28 @@ Pizza.prototype.getPrice = function(toppings){
 $(document).ready(function(){
   $("form#pizzaOrder").submit(function(event){
     event.preventDefault();
-    var sizeInput = parseInt($("input:radio[name=size]:checked").val());
-
+    var sizeInput = $("input:radio[name=size]:checked").val();
+    var userNameInput = $("input#userName").val();
     var toppingsArray = [];
     var toppingsInputs;
-
-    console.log("toppingsArray", toppingsArray);
-    console.log("toppingsInput", toppingsInputs);
     $("input:checkbox[name=toppings]:checked").each(function(){
       var toppingsInputs = $(this).val();
       toppingsArray.push(toppingsInputs);
-      console.log("toppings array", toppingsArray);
       $("#toppings").append(toppingsInputs + "<br>");
     })
-
-
     var myPizza = new Pizza(sizeInput, toppingsArray);
-    console.log(myPizza);
     var price = myPizza.getPrice();
-    console.log("price", price);
+
+    $(".orderForm").hide();
     $(".results").show();
-    $("#customer").append(nameInput);
+    $("#customer").text("Thank you, " + userNameInput + "!");
     $("#pizzaSize").text(myPizza.size);
-    $("#receipt").html(myPizza.price);
+    $("#receipt").append(price);
+
+  });
 
 
-  })
-})
+});
 
 
 

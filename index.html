@@ -11,16 +11,20 @@
   <body>
     <div class="container">
       <!-- Order form -->
+      <div class="orderForm">
         <form id="pizzaOrder">
           <!-- Size Form  -->
+          <label for="userName">Your Name:</label>
+          <input id="userName" type="text">
           <div class="form-group">
+
             <p>Pick your size:</p>
             <label>
-            <input type="radio" name="size" value="12" checked>12 Inch (Small)</label><br>
+            <input type="radio" name="size" value="12 Inch (Small)" checked>12 Inch (Small)</label><br>
             <label>
-            <input type="radio" name="size" value="16">16 Inch (Medium)</label><br>
+            <input type="radio" name="size" value="16 Inch (Medium)">16 Inch (Medium)</label><br>
             <label>
-            <input type="radio" name="size" value="20">20 Inch (Large)</label><br>
+            <input type="radio" name="size" value="20 Inch (Large)">20 Inch (Large)</label><br>
           </div>
           <!-- Toppings Form -->
           <div class="form-group">
@@ -34,13 +38,14 @@
           <!-- Submit Button -->
           <button type="submit" id="submitBtn">Place Order</button>
         </form>
+      </div>
         <!-- Receipt -->
       <div class="results">
         <span id="customer"></span>,
         <p>You have ordered a:</p>
-        <p><span id="pizzaSize"></span> pizza</p>
+        <p><span id="pizzaSize"></span> Pizza</p>
         <p>with:</p>
-        <span id="toppings"></span>
+        <span id="toppings"></span><br>
         <p>& your total comes to:</p>
         <span id="receipt"></span>
       </div>
