@@ -32,8 +32,8 @@ h5 {
   border-color: red;
   border-radius: 10px;
   padding: 10px;
-  padding-top: 20px;
-  padding-bottom: 25px;
+  padding-top: 35px;
+  padding-bottom: 30px;
 }
 .middle {
   border-style: solid;
@@ -54,6 +54,9 @@ h6 {
   padding-bottom: 25px; */
 }
 input[type=text] {
+  color: red;
+  text-shadow:1px 1px #000000;
+  font-size: 28px;
   border: 2px solid red;
   border-radius: 4px;
   width: 80%;
@@ -84,9 +87,7 @@ p{
   color:white;
   text-shadow: 1px 1px #000000;
 }
-.button {
-  font-size: 34px;
-}
+
 .submission {
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -94,3 +95,12 @@ p{
 div {
   margin-top: 10px;
 }
+.results {
+  text-align: center;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: red;
+  padding: 10px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 0, 0, 0.6);
+  margin-bottom: 25px;
