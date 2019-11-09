@@ -42,7 +42,7 @@ $(document).ready(function(){
     $(".results").show();
     $("#customer").text("Thank you, " + userNameInput + "!");
     $("#pizzaSize").text(myPizza.size);
-    $("#receipt").append(price);
+    $("#receipt").append("$ " + price + ".00");
 
   });
 

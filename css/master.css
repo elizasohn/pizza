@@ -1,5 +1,6 @@
 .results {
   display: none;
+  text-align: center
 }
 body {
     background-image: url("../img/pepperoni.jpg");
