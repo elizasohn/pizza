@@ -18,12 +18,23 @@ h1 {
 h5 {
   color: white;
   text-shadow:1px 1px #000000;
-  background-color: rgba(255, 0, 0, 0.6);
+  /* background-color: rgba(255, 0, 0, 0.6); */
   border-radius: 10px;
   padding: 10px;
   padding-top: 20px;
   padding-bottom: 25px;
 }
+.nameLabel h5 {
+  color: white;
+  text-shadow:1px 1px #000000;
+  background-color: rgba(255, 0, 0, 0.6);
+  border-color: red;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
 h6 {
   color: white;
   text-shadow:1px 1px #000000;
@@ -74,7 +85,4 @@ p{
 }
 .button {
   font-size: 34px;
-}
-.nameLabel label{
-  background-color: red;
 }
