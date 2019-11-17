@@ -7,10 +7,6 @@ function Pizza (size, toppings,) {
 Pizza.prototype.getPrice = function(toppings){
   if (this.toppings.length > 0) {
     this.price += this.toppings.length;
-    // why doesn't this forEach loop work?
-    // this.toppings.forEach(function(toppings){
-    //   this.price += 1;
-    // })
   }
   if (this.size === "12 Inch (Small)"){
     this.price += 12;
@@ -36,36 +32,12 @@ $(document).ready(function(){
       $("#toppings").append(toppingsInputs + "<br>");
     })
     var myPizza = new Pizza(sizeInput, toppingsArray);
-    var price = myPizza.getPrice();
-
+    myPizza.getPrice();
     $(".orderForm").hide();
     $(".results").show();
     $("#customer").text("Thank you, " + userNameInput + "!");
     $("#pizzaSize").text(myPizza.size);
-    $("#receipt").append("$ " + price + ".00");
+    $("#receipt").append("$ " + myPizza.price + ".00");
 
   });
-
-
 });
-
-
-
-
-
-// $(document).ready(function(){
-//   $("form#transportation_survey").submit(function(event){
-//     event.preventDefault();
-//     $("#work-responses").show();
-//     $("input:checkbox[name=work-transportation]:checked").each(function(){
-//       var workTransportationMode = $(this).val();
-//       $('#work-responses').append(workTransportationMode + "<br>");
-//     });
-//     $("#fun-responses").show();
-//     $("input:checkbox[name=fun-transportation]:checked").each(function(){
-//       var funTransportationMode = $(this).val();
-//       $('#fun-responses').append(funTransportationMode + "<br>");
-//     });
-//     $('#transportation_survey').hide();
-//   });
-// });
